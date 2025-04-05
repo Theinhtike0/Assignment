@@ -1,0 +1,33 @@
+﻿@using Product.Data.Models.Domain
+@model IEnumerable<Products>
+@{
+
+}
+
+<h3> Products List </h3>
+<div class="my-2">
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>SN</th>
+                <th>ProductName</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>CreatedAt</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.Description</td>
+                    <td>@product.Price</td>
+                    <td>@product.CreatedAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
